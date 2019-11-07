@@ -1,5 +1,5 @@
 # DailyProblem11719
-Writing small programs to solve problems as daily problem solving practice
+Writing small programs to solve problems as daily problem solving practice.
 Created a small program as possible solution to the following problem:
 
 Given a list of numbers and a number k, return whether any two numbers from that list add up to k. 
