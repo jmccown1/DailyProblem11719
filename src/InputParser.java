@@ -22,23 +22,16 @@ public class InputParser {
 	protected List<Integer> getNumberList () {
         System.out.println("Enter several numbers: ");
         List<Integer> list = new ArrayList<Integer>();
-        try {
-			String[] test = buff.readLine().split(" ");
-	        for (String temp : test) {
-	        	list.add(Integer.parseInt(temp));
-	        }
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-
-//        list.add(scan.nextInt());
-//        while(scan.hasNext()) {
-//        	if (scan.hasNextInt())
-//        		list.add(scan.nextInt());
-//            else 
-//            	scan.next();
-//        	System.out.println(scan.nextInt());
-//        }
+        do {
+	        try {
+				String[] test = buff.readLine().split(" ");
+		        for (String temp : test) {
+		        	list.add(Integer.parseInt(temp));
+		        }
+			} catch (Exception e) {
+				System.out.println("You did not enter a valid series of numbers. Please enter several numbers:");
+			}
+        }while(list.isEmpty());
         return list;
 	}
 }
